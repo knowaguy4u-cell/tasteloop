@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: tasteloop
+    runtime: python
+    buildCommand: ""
+    startCommand: python3 backend/server.py
+    healthCheckPath: /api/health
+    envVars:
+      - key: QLOO_API_KEY
+        sync: false

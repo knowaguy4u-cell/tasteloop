@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="TasteLoop Agent — your week, grounded in real taste data. Powered by Qloo.">
+  <title>TasteLoop Agent — Your Week, Grounded in Taste</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <h1 class="brand">TasteLoop Agent</h1>
+      <p class="tagline">Your week, grounded in real taste data &mdash; powered by Qloo</p>
+      <div class="mode-badge" id="mode-badge" aria-live="polite">
+        <span class="dot"></span><span id="mode-label">Checking backend&hellip;</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="panel input-panel" aria-label="Plan your week">
+      <label class="field-label" for="week-text">Describe your week&hellip;</label>
+      <textarea id="week-text" rows="4"
+        placeholder="e.g. Long days at the office, finally free Friday night. I want good food, maybe a live show, and something fun to do with friends."></textarea>
+
+      <span class="field-label">Mood</span>
+      <div class="chips" id="mood-chips" role="radiogroup" aria-label="Mood">
+        <button type="button" class="chip" data-mood="chill" role="radio" aria-checked="false">Chill</button>
+        <button type="button" class="chip" data-mood="energetic" role="radio" aria-checked="false">Energetic</button>
+        <button type="button" class="chip" data-mood="romantic" role="radio" aria-checked="false">Romantic</button>
+        <button type="button" class="chip" data-mood="adventurous" role="radio" aria-checked="false">Adventurous</button>
+        <button type="button" class="chip" data-mood="focused" role="radio" aria-checked="false">Focused</button>
+        <button type="button" class="chip" data-mood="nostalgic" role="radio" aria-checked="false">Nostalgic</button>
+      </div>
+
+      <label class="field-label" for="city-input">City</label>
+      <input type="text" id="city-input" placeholder="e.g. Denver, CO" autocomplete="address-level2">
+
+      <button type="button" class="cta" id="plan-btn">Plan my week</button>
+      <p class="warning" id="warning" hidden></p>
+      <p class="error" id="error" hidden></p>
+    </section>
+
+    <section class="signals" id="signals" hidden aria-label="Detected signals">
+      <span class="signals-title">Detected signals:</span>
+      <span id="signals-mood" class="pill mood"></span>
+      <span id="signals-tags"></span>
+    </section>
+
+    <div class="view-bar" id="view-bar" hidden>
+      <div class="toggle" role="tablist" aria-label="Plan view">
+        <button type="button" class="toggle-btn active" data-view="grounded" role="tab" aria-selected="true">Qloo-grounded</button>
+        <button type="button" class="toggle-btn" data-view="baseline" role="tab" aria-selected="false">Generic baseline</button>
+      </div>
+      <p class="baseline-caption" id="baseline-caption" hidden>Simulated generic picks &mdash; popular overall, matched to nothing.</p>
+    </div>
+
+    <div id="results" aria-live="polite"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Built for the Qloo Agentic Hackathon &middot; TasteLoop Agent &middot; TMTProductions1</p>
+      <p class="fine">Demo only &mdash; recommendations are illustrative.</p>
+    </div>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

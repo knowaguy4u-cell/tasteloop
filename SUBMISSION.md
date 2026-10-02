@@ -2,8 +2,12 @@
 
 **Hackathon:** Qloo Agentic Hackathon (https://qloo.devpost.com/)
 **Team/display name:** TMTProductions1
-**Demo URL:** [TO FILL — externally hosted app URL after deploy]
-**Repo URL:** [TO FILL — public GitHub repo URL after push]
+**Demo URL:** https://tasteloop-12w3cus4x-knowaguy4u-cell.vercel.app (live, hosted on
+Vercel Hobby free tier — no card required; currently running in clearly-labeled
+demo-data mode until the Qloo API key arrives, then it flips to live Qloo data
+via env var). Local fallback: `python3 backend/server.py`, open
+http://localhost:8080.
+**Repo URL:** https://github.com/knowaguy4u-cell/tasteloop (public, MIT)
 **Video:** not required for this hackathon — none.
 
 ---

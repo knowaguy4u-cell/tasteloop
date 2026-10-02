@@ -1,0 +1,1 @@
+{"rewrites":[{"destination":"/frontend/:path*","source":"/static/:path*"},{"destination":"/frontend/index.html","source":"/"}]}
